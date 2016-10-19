@@ -80,5 +80,6 @@ class App extends React.Component {
 }
 
 ajaxHelpers.getImages(function(images) {
+  console.log('getImages was run and return images: ');
   ReactDOM.render(<App imageData={images}/>, document.getElementById('app'));
 });
