@@ -179,6 +179,7 @@
 	}(_react2.default.Component);
 	
 	_ajaxHelpers2.default.getImages(function (images) {
+	  console.log('getImages was run and return images: ');
 	  _reactDom2.default.render(_react2.default.createElement(App, { imageData: images }), document.getElementById('app'));
 	});
 
@@ -22537,7 +22538,7 @@
 	});
 	var getImages = function getImages(callback) {
 	  $.ajax({
-	    url: 'http://localhost:8080/images',
+	    url: 'https://photo-outlet.herokuapp.com/images',
 	    type: 'GET',
 	    success: function success(data) {
 	      return callback(data);
@@ -22550,7 +22551,7 @@
 	
 	var postImage = function postImage(image, callback) {
 	  $.post({
-	    url: "http://localhost:8080/image",
+	    url: "https://photo-outlet.herokuapp.com/image",
 	    data: image,
 	    success: function success(image) {
 	      callback(image);
@@ -22565,7 +22566,7 @@
 	var destroyRequest = function destroyRequest(image, callback) {
 	  var imageId = image.id;
 	  $.ajax({
-	    url: "http://localhost:8080/image",
+	    url: "https://photo-outlet.herokuapp.com/image",
 	    type: 'DELETE',
 	    data: image,
 	    success: function success(image) {
