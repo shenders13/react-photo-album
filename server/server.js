@@ -10,7 +10,7 @@ app.use(bodyParser());
 app.use(express.static('../client'));
 
 app.get('/', function(req, res) {
-  res.sendFile('../client');
+  res.sendFile(__dirname + '../client');
 });
 
 app.get('/images', serverHelpers.fetchImages);
