@@ -4,7 +4,7 @@ var serverHelpers = require('../lib/serverHelpers');
 var app = express();
 app.use(bodyParser());
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
 
 app.use('/', express.static('../client'));
 
