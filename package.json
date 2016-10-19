@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,4 +25,3 @@
     "babel-watch": "^2.0.3"
   }
 }
-
