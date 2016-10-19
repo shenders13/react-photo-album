@@ -6,11 +6,6 @@ app.use(bodyParser());
 
 app.use('/', express.static('../client'));
 
-// app.get('/images', function (req, res) {
-//   console.log('received get request');
-//   res.send(imageData);
-// });
-
 app.get('/images', serverHelpers.fetchImages);
 
 app.post('/image', serverHelpers.saveImage);
@@ -28,3 +23,4 @@ app.delete('/image', function (req, res) {
 app.listen(8080, function () {
   console.log('Photo Outlet Server listening on port 8080!');
 });
+
