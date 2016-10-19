@@ -8,6 +8,10 @@ app.use(bodyParser());
 
 app.use('/', express.static('../client'));
 
+app.get('/', function(req, res) {
+  res.sendFile('../client/index.html');
+})
+
 app.get('/images', serverHelpers.fetchImages);
 
 app.post('/image', serverHelpers.saveImage);
