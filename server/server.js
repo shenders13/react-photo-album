@@ -6,11 +6,12 @@ app.use(bodyParser());
 
 // app.set('port', (process.env.PORT || 8080));
 
-app.use('/', express.static('../client'));
+// app.use('/', express.static('../client'));
+app.use(express.static('../client'));
 
 app.get('/', function(req, res) {
-  res.sendFile('../client/index.html');
-})
+  res.sendFile('../client');
+});
 
 app.get('/images', serverHelpers.fetchImages);
 
