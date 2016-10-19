@@ -1,9 +1,12 @@
-1. delete requests should delete items on the server
-2. connect server to a database
 3. deploy to heroku
 --
 4. go back over weekly assessment
 
-    // "test": "echo \"Error: no test specified\" && exit 1",
-    // "start": "node_modules/.bin/webpack-dev-server",
-    // "compile": "./node_modules/.bin/webpack -d"
+commands to run locally: 
+- 'node server.js':    starts server
+- 'npm start':    runs webpack dev server
+- 'sudo mongod':    start database server
+- 'npm run compile':   compile jsx when any changes are made to app folder
+- 'mongo':   mongo console
+
+

@@ -10,15 +10,7 @@ app.get('/images', serverHelpers.fetchImages);
 
 app.post('/image', serverHelpers.saveImage);
 
-app.delete('/image', function (req, res) {
-  var imageObj = req.body;
-  for (var i = 0; i < imageData.length; i++) {
-    if (imageData[i].id.toString() === imageObj.id.toString()) {
-      imageData.splice(i, 1);
-    }
-  }
-  res.status(200).send('Deletion successful!');
-});
+app.delete('/image', serverHelpers.deleteImage);
 
 app.listen(8080, function () {
   console.log('Photo Outlet Server listening on port 8080!');

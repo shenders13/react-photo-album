@@ -12,7 +12,6 @@ var getImages = function(callback) {
 };
 
 var postImage = function(image, callback) {
-  console.log('postImage is being called! data: ', image);
   $.post({
     url: "http://localhost:8080/image",
     data: image,
@@ -27,7 +26,6 @@ var postImage = function(image, callback) {
 };
 
 var destroyRequest = function(image, callback) {
-  console.log('destroyRequest is being called! data: ', image);
   var imageId = image.id;
   $.ajax({
     url: "http://localhost:8080/image",
