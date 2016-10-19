@@ -1,12 +1,15 @@
 var mongoose = require('mongoose');
 var serverHelpers = require('../lib/serverHelpers.js');
-mongoose.connect('mongodb://heroku_h33nqrvn:tar07caj285k8t64819jgm3t0h@ds061506.mlab.com:61506/heroku_h33nqrvn');
-// mongoose.connect('mongodb://localhost/photoApp');
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect('mongodb://localhost/photoApp');
+}
 
 var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', function() {
     console.log('MongoDB connection is open!');
-  });
+});
 
 exports.db = db;
