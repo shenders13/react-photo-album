@@ -1,1 +1,1 @@
-web: npm start -p process.env.PORT
+web: node server/server.js
