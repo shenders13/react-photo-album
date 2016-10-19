@@ -7,7 +7,7 @@ app.use(bodyParser());
 // app.set('port', (process.env.PORT || 8080));
 
 // app.use('/', express.static('../client'));
-app.use(express.static('../client'));
+app.use(express.static('/../client'));
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '../client');
