@@ -22538,7 +22538,7 @@
 	});
 	var getImages = function getImages(callback) {
 	  $.ajax({
-	    url: 'https://photo-outlet.herokuapp.com/images',
+	    url: '/images',
 	    type: 'GET',
 	    success: function success(data) {
 	      return callback(data);
@@ -22551,7 +22551,7 @@
 	
 	var postImage = function postImage(image, callback) {
 	  $.post({
-	    url: "https://photo-outlet.herokuapp.com/image",
+	    url: "/image",
 	    data: image,
 	    success: function success(image) {
 	      callback(image);
@@ -22566,7 +22566,7 @@
 	var destroyRequest = function destroyRequest(image, callback) {
 	  var imageId = image.id;
 	  $.ajax({
-	    url: "https://photo-outlet.herokuapp.com/image",
+	    url: "/image",
 	    type: 'DELETE',
 	    data: image,
 	    success: function success(image) {
