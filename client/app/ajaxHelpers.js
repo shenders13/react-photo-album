@@ -1,6 +1,6 @@
 var getImages = function(callback) {
   $.ajax({
-    url: '/images',
+    url: 'https://photo-outlet.herokuapp.com/images',
     type: 'GET',
     success: function(data) {
       return callback(data) ;
@@ -13,7 +13,7 @@ var getImages = function(callback) {
 
 var postImage = function(image, callback) {
   $.post({
-    url: "/image",
+    url: "https://photo-outlet.herokuapp.com/image",
     data: image,
     success: function(image) {
       callback(image);
@@ -28,7 +28,7 @@ var postImage = function(image, callback) {
 var destroyRequest = function(image, callback) {
   var imageId = image.id;
   $.ajax({
-    url: "/image",
+    url: "https://photo-outlet.herokuapp.com/image",
     type: 'DELETE',
     data: image,
     success: function(image) {
