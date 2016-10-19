@@ -1,0 +1,1 @@
+web: npm start -p process.env.PORT
