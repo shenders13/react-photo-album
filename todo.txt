@@ -1,0 +1,5 @@
+1. delete requests should delete items on the server
+2. connect server to a database
+3. deploy to heroku
+--
+4. go back over weekly assessment
