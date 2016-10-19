@@ -14,7 +14,6 @@ app.post('/image', serverHelpers.saveImage);
 
 app.delete('/image', serverHelpers.deleteImage);
 
-// app.listen(8080, function () {
-//   console.log('Photo Outlet Server listening on port 8080!');
-// });
-
+app.listen(process.env.PORT ||8080, function () {
+  console.log('Photo Outlet Server listening on port 8080!');
+});
